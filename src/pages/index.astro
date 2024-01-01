@@ -8,42 +8,51 @@ import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Briefcase from '../components/icons/Briefcase.astro';
+import Projects from '../components/Projects.astro';
+import ProjectIcon from '../components/icons/ProjectIcon.astro';
 ---
 
 <Layout
 	title="Portfolio de Cristian Gadea - Desarrollador, Programador e Instructor web"
 	description='Contrata a Cristian Gadea, Desarrollador web Fullstack, Instructor de programación y Fundador de Code & Mate, especializado en crear aplicaciones únicas, para crear tu aplicación o sitio web.'
 >
-	<main>
-		<SectionContainer class="py-44 pb-24">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
 			<img
 				class="rounded-full size-16"
 				src="https://avatars.githubusercontent.com/u/48569202?v=4"
 				alt="cris"
 			/>
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4 mt-4">Hey, soy Cristian Gadea <a href="https://www.linkedin.com/in/cristian-gadea/" rel="noopener" target="_blank" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a></h1>
-			<h2 class="text-2xl text-wrap"><span class="text-neutral-400">+6 años de experiencia.</span><span class="opacity-80 text-yellow-200/90"> Desarrollador web Fullstack 💻</span>, Instructor de programación 👨🏻‍🏫 y también Fundador de <a href="https://www.codeandmate.com">Code <span class="text-green-500">&</span> Mate 🧉</a> Consultoría de Softwarwe y de su <a href="https://www.codeandmate.com.ar"><span class="text-emerald-500">Academia.</span></a> <span class="text-blue-200/90"> De Buenos Aires, Argentina 🇦🇷</span> <span class="opacity-75">Especializado en crear aplicaciones únicas.</span></h2>
-			<nav class="flex gap-x-2 mt-8">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 mt-4">Hey, soy Cristian Gadea <a href="https://www.linkedin.com/in/cristian-gadea/" rel="noopener" target="_blank" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a></h1>
+			<h2 class="text-xl lg:text-3xl text-wrap max-w-[700px]"><span class="text-neutral-400">+6 años de experiencia.</span><span class=" text-yellow-200/90"> Desarrollador web Fullstack 💻</span>, Instructor de programación 👨🏻‍🏫 y Fundador de <a href="https://www.codeandmate.com" class="hover:text-yellow-200 hover:scale-110 hover:bg-white/10 transition">Code <span class="text-green-500">&</span> Mate 🧉</a> Consultoría de Softwarwe y su <a href="https://www.codeandmate.com.ar" class="hover:scale-110 hover:bg-white/10 transition"><span class="text-yellow-200/90">Academia.</span></a> <span class="text-blue-200/90"> De Buenos Aires, Argentina 🇦🇷</span> <span class="opacity-75">Especializado en crear aplicaciones únicas.</span></h2>
+			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/cristian-gadea/">
-					<LinkedInIcon class="size-6"/>
+					<LinkedInIcon class="size-4 md:size-6"/>
 					Linkedin
 				</SocialPill>
 				<SocialPill href="https://github.com/CrisGadea">
-					<GithubIcon class="size-6"/>
+					<GithubIcon class="size-4 md:size-6"/>
 					Github
 				</SocialPill>
 				<SocialPill href="mailto:cristianhernangadea@gmail.com">
-					<EmailIcon class="size-6"/>
+					<EmailIcon class="size-4 md:size-6"/>
 					cristianhernangadea@gmail.com
 				</SocialPill>
 			</nav>
 		</SectionContainer>
 		<SectionContainer id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-7"/>
 				Experiencia laboral
 			</h2>
 			<Experience />
+		</SectionContainer>
+		<SectionContainer id="proyectos" class="py-24 pb-24" id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ProjectIcon class="size-7 md:size-10"/>
+				Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
