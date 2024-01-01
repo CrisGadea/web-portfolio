@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LinkedInIcon from '../components/icons/Linkedin.astro';
+import GithubIcon from '../components/icons/Github.astro';
+import EmailIcon from '../components/icons/Mail.astro';
+import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+---
+
+<Layout
+	title="Portfolio de Cristian Gadea - Desarrollador, Programador e Instructor web"
+	description='Contrata a Cristian Gadea, Desarrollador web Fullstack, Instructor de programación y Fundador de Code & Mate, especializado en crear aplicaciones únicas, para crear tu aplicación o sitio web.'
+>
+	<main>
+		<SectionContainer class="py-44 pb-24">
+			<img
+				class="rounded-full size-16"
+				src="https://avatars.githubusercontent.com/u/48569202?v=4"
+				alt="cris"
+			/>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4 mt-4">Hey, soy Cristian Gadea <a href="https://www.linkedin.com/in/cristian-gadea/" rel="noopener" target="_blank" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a></h1>
+			<h2 class="text-2xl text-wrap"><span class="text-neutral-400">+6 años de experiencia.</span><span class="opacity-80 text-yellow-200/90"> Desarrollador web Fullstack 💻</span>, Instructor de programación 👨🏻‍🏫 y también Fundador de <a href="https://www.codeandmate.com">Code <span class="text-green-500">&</span> Mate 🧉</a> Consultoría de Softwarwe y de su <a href="https://www.codeandmate.com.ar"><span class="text-emerald-500">Academia.</span></a> <span class="text-blue-200/90"> De Buenos Aires, Argentina 🇦🇷</span> <span class="opacity-75">Especializado en crear aplicaciones únicas.</span></h2>
+			<nav class="flex gap-x-2 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/cristian-gadea/">
+					<LinkedInIcon class="size-6"/>
+					Linkedin
+				</SocialPill>
+				<SocialPill href="https://github.com/CrisGadea">
+					<GithubIcon class="size-6"/>
+					Github
+				</SocialPill>
+				<SocialPill href="mailto:cristianhernangadea@gmail.com">
+					<EmailIcon class="size-6"/>
+					cristianhernangadea@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7"/>
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+	</main>
+</Layout>

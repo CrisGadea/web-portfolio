@@ -1,0 +1,40 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+    {
+        title: 'Founder, Senior Fullstack Developer & Instructor',
+        company: 'Code & Mate',
+        location: 'Remoto',
+        date: '07/2022 a Actualidad',
+        description: 'Consultoría de Software local y academia de programación. Fundé Code & Mate con el propósito de poder crear aplicaciones y sitios web innovadores y eficientes para mis clientes. También enseño a otros a programar y a crear aplicaciones y sitios web.',
+        logo: 'https://flowbite.com/docs/images/logo.svg',
+        url: 'https://www.codeandmate.com',
+    },
+    {
+        title: 'Insctuctor de Programación',
+        company: 'Codo a Codo',
+        location: 'Remote',
+        date: '03/2022 a 12/2023',
+        description: 'Fuí Instructor de Programación para la Agencia de Aprendizaje a lo Largo de la Vida (programa Codo a Codo), en donde capacité a cientos de estudiantes en las tecnologías de vanguardia (Desarrollo Java Fullstack y Java Avanzado con Spring Boot).',
+        logo: 'https://flowbite.com/docs/images/logo.svg',
+        url: 'https://agenciadeaprendizaje.bue.edu.ar/codo-a-codo/',
+    },
+    {
+        title: 'Application Developer - Senior Analyst',
+        company: 'Accenture',
+        location: 'Remote',
+        date: '09/2022 a 05/2023',
+        description: 'Desarrollador Java con Spring Boot para importante cliente del rubro bancario.',
+        logo: '',
+        url: 'https://www.accenture.com/ar-es',
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {EXPERIENCE.map(experiencie => 
+        <li class="mb-10 ms-6">
+            <ExperienceItem {...experiencie}/>
+        </li>
+    )}
+</ol>
